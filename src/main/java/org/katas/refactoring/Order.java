@@ -8,6 +8,7 @@ public class Order {
     List<LineItem> li;
 
     public Order(String nm, String addr, List<LineItem> li) {
+        //去掉super()
         this.nm = nm;
         this.addr = addr;
         this.li = li;
@@ -15,6 +16,14 @@ public class Order {
 
     public String getCustomerName() {
         return nm;
+    }
+
+    public void setNm(String nm) {//添加了set方法
+        this.nm = nm;
+    }
+
+    public void setAddr(String addr) {
+        this.addr = addr;
     }
 
     public String getCustomerAddress() {

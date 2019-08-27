@@ -37,5 +37,15 @@ public class OrderReceiptTest {
                 "Total Amount\t71.5"
         );
     }
+    @Test
+    public void should(){
+        //given
+        Order order = new Order("Mr X", "Chicago, 60601", new ArrayList<LineItem>());
+        OrderReceipt orderReceipt = new OrderReceipt(order);
+        //when
+        String s = orderReceipt.printReceipt();
+        //then
+        System.out.println(s);
+    }
 
 }
