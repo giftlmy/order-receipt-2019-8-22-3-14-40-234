@@ -25,13 +25,14 @@ public class LineItem {
         return quantity;
     }
 
-    public double totalAmount() {
+    public double calculateAmount() {
 
         return price * quantity;
     }
     public String generateOrderInfomation(){
         return this.getDescription() + '\t'
                 + this.getPrice() + '\t'
-                + 
+                + this.getQuantity() + '\t'
+                + this.calculateAmount() + '\n';
     }
 }
