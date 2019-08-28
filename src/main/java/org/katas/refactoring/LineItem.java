@@ -1,44 +1,37 @@
 package org.katas.refactoring;
 
 public class LineItem {
-    private String desc;
-    private double p;
-    private int qty;
+    private String description;
+    private double price;
+    private int quantity;
 
-    public LineItem(String desc, double p, int qty) {
+    public LineItem(String description, double p, int qty) {
        //去掉super()
-        this.desc = desc;
-        this.p = p;
-        this.qty = qty;
+        this.description = description;
+        this.price = p;
+        this.quantity = qty;
     }
 
     public String getDescription() {
 
-        return desc;
+        return description;
     }
 
     public double getPrice() {
-        return p;
+        return price;
     }
 
     public int getQuantity() {
-        return qty;
+        return quantity;
     }
 
-    public void setDesc(String desc) {//添加了set方法
-        this.desc = desc;
+    public double totalAmount() {
+
+        return price * quantity;
     }
-
-    public void setP(double p) {
-        this.p = p;
-    }
-
-    public void setQty(int qty) {
-        this.qty = qty;
-    }
-
-    double totalAmount() {
-
-        return p * qty;
+    public String generateOrderInfomation(){
+        return this.getDescription() + '\t'
+                + this.getPrice() + '\t'
+                + 
     }
 }

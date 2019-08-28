@@ -3,34 +3,26 @@ package org.katas.refactoring;
 import java.util.List;
 
 public class Order {
-    String nm;
-    String addr;
-    List<LineItem> li;
+    private String name;
+    private String address;
+    List<LineItem> lineItems;
 
-    public Order(String nm, String addr, List<LineItem> li) {
+    public Order(String name, String address, List<LineItem> lineItems) {
         //去掉super()
-        this.nm = nm;
-        this.addr = addr;
-        this.li = li;
+        this.name =  name;
+        this.address = address;
+        this.lineItems = lineItems;
     }
 
     public String getCustomerName() {
-        return nm;
-    }
-
-    public void setNm(String nm) {//添加了set方法
-        this.nm = nm;
-    }
-
-    public void setAddr(String addr) {
-        this.addr = addr;
+        return name;
     }
 
     public String getCustomerAddress() {
-        return addr;
+        return address;
     }
 
     public List<LineItem> getLineItems() {
-        return li;
+        return lineItems;
     }
 }
